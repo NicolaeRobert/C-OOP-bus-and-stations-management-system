@@ -12,7 +12,6 @@ class Passenger{
     public:
         Passenger(std::string name,std::string email);    //Constructor
         void show_tickets_bought();   //Show the tickets that were bought
-        void buy_ticket(City_Bus*,int,int,int,double);  //Method that allows us to buy a ticket(for city bus)
-        void buy_ticket(Intercity_Bus*,int,int,int,double);  //Method that allows us to buy a ticket(for intercity bus)
+        void buy_ticket(Bus*,int,int,int,double);  //Method that allows us to buy a ticket(for city bus)
         ~Passenger();     //Destructor
 };
