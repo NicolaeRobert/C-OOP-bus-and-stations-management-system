@@ -1,18 +1,24 @@
 #include <iostream>
 #include "city.hpp"
+#include "city_bus.hpp"
+#include "intercity_bus.hpp"
 
 using namespace std;
 
 //Method that adds city buses
-void City::add_city_bus(string tip_linie,string numar_autobuz,int ocupate,int capacitate,vector<string> traseu){
-    obj_city_buses.push_back(new City_Bus(tip_linie,numar_autobuz,ocupate,capacitate,traseu));
+void City::add_city_bus(string type_of_line,string no_bus,int taken,int capacity,vector<string> route){
+    obj_buses.push_back(new City_Bus(1,type_of_line,no_bus,taken,capacity,route));
 }
 
 //Show city buses
 void City::show_city_buses(){
-    for(int i=0;i<obj_city_buses.size();i++){
-        cout<<i+1<<". ";
-        obj_city_buses[i]->raport();
+    int nr=1;
+    for(int i=0;i<obj_buses.size();i++){
+        if(obj_buses[i]->type==1){
+            cout<<nr<<". ";
+            nr++;
+            obj_buses[i]->raport();
+        }
     }
 }
 
@@ -20,15 +26,15 @@ void City::show_city_buses(){
 void City::look_for_city_route(string plecare,string destinatie){
     vector<int> rezultat;
     int i;
-    for(i=0;i<obj_city_buses.size();i++){
-        if(obj_city_buses[i]->is_in_route(plecare,destinatie)==true){
+    for(i=0;i<obj_buses.size();i++){
+        if(obj_buses[i]->type==1&&obj_buses[i]->is_in_route(plecare,destinatie)==true){
             rezultat.push_back(i);
         }
     }
     if(rezultat.size()!=0){
         cout<<"This destionation exists and you can find it in the next buses:"<<'\n';
         for(i=0;i<rezultat.size();i++){
-           cout<<obj_city_buses[rezultat[i]]->return_no_of_bus()<<'\n';
+           cout<<obj_buses[rezultat[i]]->return_no_of_bus()<<'\n';
         }
     }
     else{
@@ -38,15 +44,19 @@ void City::look_for_city_route(string plecare,string destinatie){
 }
 
 //Method that adds intercity buses
-void City::add_intercity_bus(string oras_plecare,string oras_sosire,double durata_calatorie,string numar_autobuz,int ocupate,int capacitate,vector<string> traseu){
-    obj_intercity_buses.push_back(new Intercity_Bus(oras_plecare,oras_sosire,durata_calatorie,numar_autobuz,ocupate,capacitate,traseu));
+void City::add_intercity_bus(string departure_city,string destination_city,double time,string no_bus,int taken,int capacity,vector<string> route){
+    obj_buses.push_back(new Intercity_Bus(2,departure_city,destination_city,time,no_bus,taken,capacity,route));
 }
 
 //Show intercity buses
 void City::show_intercity_buses(){
-    for(int i=0;i<obj_intercity_buses.size();i++){
-        cout<<i+1<<". ";
-        obj_intercity_buses[i]->raport();
+    int nr=1;
+    for(int i=0;i<obj_buses.size();i++){
+        if(obj_buses[i]->type==2){
+            cout<<nr<<". ";
+            nr++;
+            obj_buses[i]->raport();
+        }
     }
 }
 
@@ -54,15 +64,15 @@ void City::show_intercity_buses(){
 void City::look_for_intercity_route(string destinatie){
     vector<int> rezultat;
     int i;
-    for(i=0;i<obj_intercity_buses.size();i++){
-        if(obj_intercity_buses[i]->is_in_route(destinatie)==true){
+    for(i=0;i<obj_buses.size();i++){
+        if(obj_buses[i]->type==2&&obj_buses[i]->is_in_route(destinatie)==true){
             rezultat.push_back(i);
         }
     }
     if(rezultat.size()!=0){
         cout<<"This destionation exists and you can find it in the next buses:"<<'\n';
         for(i=0;i<rezultat.size();i++){
-            cout<<obj_intercity_buses[rezultat[i]]->return_no_of_bus()<<'\n';
+            cout<<obj_buses[rezultat[i]]->return_no_of_bus()<<'\n';
         }
     }
     else{
@@ -72,24 +82,14 @@ void City::look_for_intercity_route(string destinatie){
 }
 
 //Return a city bus object
-City_Bus* City::return_city_bus(int index){
-    return obj_city_buses[index-1];
-}
-
-//Return an intercity bus object
-Intercity_Bus* City::return_intercity_bus(int index){
-    return obj_intercity_buses[index-1];
+Bus* City::return_bus(int index){
+    return obj_buses[index-1];
 }
 
 //Destructor
 City::~City(){
-    for(int i=0;i<obj_city_buses.size();i++){
-        delete obj_city_buses[i];
+    for(int i=0;i<obj_buses.size();i++){
+        delete obj_buses[i];
     }
-    obj_city_buses.clear();
-
-    for(int i=0;i<obj_intercity_buses.size();i++){
-        delete obj_intercity_buses[i];
-    }
-    obj_intercity_buses.clear();
+    obj_buses.clear();
 }
