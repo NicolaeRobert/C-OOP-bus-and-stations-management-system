@@ -1,0 +1,68 @@
+5
+
+NORMAL 336 45 70 5
+Drumul Taberei
+Razoare
+Eroilor
+Universitate
+Piata Unirii
+
+EXPRESS E1 22 40 4
+Aviatorilor
+Victoriei
+Romana
+Unirii
+
+NORMAL 102 38 60 4
+Cora Pantelimon
+Morarilor
+Obor
+Universitate
+
+NORMAL 368 52 75 5
+Militari
+Lujerului
+Gorjului
+Politehnica
+Eroilor
+
+EXPRESS E7 18 35 3
+Baneasa
+Pipera
+Aurel Vlaicu
+
+5
+
+Bucuresti Craiova 3.5 IR6 28 50 4
+Bucuresti
+Pitesti
+Slatina
+Craiova
+
+Bucuresti Timisoara 7.0 IR7 34 60 6
+Bucuresti
+Pitesti
+Ramnicu Valcea
+Sibiu
+Deva
+Timisoara
+
+Bucuresti Cluj 8.0 IR8 32 55 6
+Bucuresti
+Ploiesti
+Brasov
+Sibiu
+Alba Iulia
+Cluj-Napoca
+
+Bucuresti Iasi 6.0 IR9 40 65 5
+Bucuresti
+Buzau
+Focsani
+Bacau
+Iasi
+
+Bucuresti Constanta 3.5 IR10 36 60 4
+Bucuresti
+Fetesti
+Constanta

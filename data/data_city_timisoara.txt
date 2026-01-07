@@ -1,0 +1,68 @@
+5
+
+NORMAL 14 37 60 5
+Calea Aradului
+UMF
+Punctele Cardinale
+Centru
+Piata Traian
+
+EXPRESS E2 16 40 4
+Gara de Nord
+Centru
+Catedrala Mitropolitana
+Spitalul Judetean
+
+NORMAL 33 42 55 4
+Calea Sagului
+Dambovita
+Centru
+Universitatea de Vest
+
+EXPRESS E7 19 35 3
+Complex Studentesc
+Centru
+Iulius Town
+
+NORMAL 5 29 50 4
+Mehala
+Balta Verde
+Circumvalatiunii
+Centru
+
+5
+
+Timisoara Bucuresti 7.5 IR11 33 55 6
+Timisoara
+Deva
+Sibiu
+Pitesti
+Ploiesti
+Bucuresti
+
+Timisoara Cluj 4.0 IR12 30 50 4
+Timisoara
+Arad
+Oradea
+Cluj-Napoca
+
+Timisoara Craiova 5.5 IR13 27 50 3
+Timisoara
+Drobeta-Turnu Severin
+Craiova
+
+Timisoara Brasov 6.5 IR14 29 55 5
+Timisoara
+Sibiu
+Fagaras
+Ploiesti
+Brasov
+
+Timisoara Iasi 9.0 IR15 35 65 7
+Timisoara
+Arad
+Oradea
+Cluj-Napoca
+Bistrita
+Bacau
+Iasi

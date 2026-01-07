@@ -1,0 +1,64 @@
+5
+
+NORMAL 1 32 60 5
+Rovine
+Calea Bucuresti
+Centru
+English Park
+Gara
+
+EXPRESS E3 18 40 4
+Electroputere Mall
+Universitate
+Centru
+Teatrul National
+
+NORMAL 4 54 55 4
+Valea Rosie
+Sarari
+Centru
+Targul din Obor
+
+EXPRESS E1 25 35 3
+Craiovita Noua
+Parcul Romanescu
+Centru
+
+NORMAL 9 28 50 4
+Brazda lui Novac
+Calea Severinului
+Centru
+Consiliul Judetean
+
+5
+
+Craiova Bucuresti 3.5 IR1 28 50 4
+Craiova
+Pitesti
+Slatina
+Bucuresti
+
+Craiova Timisoara 5.5 IR2 22 55 3
+Craiova
+Drobeta-Turnu Severin
+Timisoara
+
+Craiova Cluj 7.0 IR3 30 60 5
+Craiova
+Targu Jiu
+Sibiu
+Alba Iulia
+Cluj-Napoca
+
+Craiova Brasov 4.5 IR4 25 50 4
+Craiova
+Pitesti
+Ploiesti
+Brasov
+
+Craiova Constanta 6.0 IR5 35 65 5
+Craiova
+Pitesti
+Bucuresti
+Fetesti
+Constanta
